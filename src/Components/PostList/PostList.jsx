@@ -3,20 +3,20 @@ const PostList = (props) => {
     return ( 
         <table>
             <thead>
-            <th>
-                <tr>Name</tr>
-                <tr>Post</tr>
-            </th>
+                <tr>
+                    <th>Name</th>
+                    <th>Post</th>
+                </tr>
             </thead>
             <tbody>
-            {props.postEntries.map((post, index) => {
-                return (
-                <tr key={index}>
-                    <td>{post.name}</td>
-                    <td>{post.post}</td>
-                </tr>
-                );
-            })}
+                {props.postEntries.map((post, index) => {
+                    return (
+                        <tr key={index}>
+                            <td>{post.name}</td>
+                            <td>{post.post}</td>
+                        </tr>
+                    );
+                })}
             </tbody>
         </table>
      );

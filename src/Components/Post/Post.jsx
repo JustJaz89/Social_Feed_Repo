@@ -1,0 +1,3 @@
+function likeButton();
+
+function dislikeButton()

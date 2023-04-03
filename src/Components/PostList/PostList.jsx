@@ -9,9 +9,9 @@ const PostList = (props) => {
             </th>
             </thead>
             <tbody>
-            {props.postEntries.map((post) => {
+            {props.postEntries.map((post, index) => {
                 return (
-                <tr>
+                <tr key={index}>
                     <td>{post.name}</td>
                     <td>{post.post}</td>
                 </tr>

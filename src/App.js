@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PostList from "./Components/PostList/PostList";
 import CreatePostForm from './Components/CreatePostForm/CreatePostForm';
-
+import "./App.css";
 
 function App() {
 
@@ -18,8 +18,12 @@ function App() {
     <div className="container-fluid">
       <div className="row">
         <div className="col">
-          <CreatePostForm addNewPostProperty={addNewPost} />
-          <PostList postEntries={posts} />
+          <div className="border-box"> 
+            <CreatePostForm addNewPostProperty={addNewPost} />
+          </div>
+          <div className="border-box"> 
+            <PostList postEntries={posts} />
+          </div>
         </div>
       </div>
     </div>

@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import PostList from "./Components/PostList/PostList";
 import CreatePostForm from './Components/CreatePostForm/CreatePostForm';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
 
@@ -16,9 +15,13 @@ function App() {
   }
 
   return (
-    <div>
-      <PostList postEntries={posts} />
-      <CreatePostForm addNewPostProperty={addNewPost} />
+    <div className="container-fluid">
+      <div className="row">
+        <div className="col">
+          <CreatePostForm addNewPostProperty={addNewPost} />
+          <PostList postEntries={posts} />
+        </div>
+      </div>
     </div>
   );
 }

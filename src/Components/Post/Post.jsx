@@ -1,3 +1,0 @@
-// function likeButton();
-
-// function dislikeButton()

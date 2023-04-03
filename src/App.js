@@ -18,6 +18,8 @@ function App() {
   return (
     <div className="container-fluid">
       <div className="row">
+        <h3 style={{margin: "1em"}}>Social
+        <medium className="text-muted">Feed</medium> </h3>
         <div className="col">
           <div className="border-box"> 
             <CreatePostForm addNewPostProperty={addNewPost} />

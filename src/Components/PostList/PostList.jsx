@@ -1,5 +1,5 @@
 
-const CreatePostForm = (props) => {
+const PostList = (props) => {
     return ( 
         <table>
             <thead>
@@ -9,7 +9,7 @@ const CreatePostForm = (props) => {
             </th>
             </thead>
             <tbody>
-            {posts.map((post) => {
+            {props.postEntries.map((post) => {
                 return (
                 <tr>
                     <td>{post.name}</td>
@@ -22,4 +22,4 @@ const CreatePostForm = (props) => {
      );
 }
  
-export default CreatePostForm;
+export default PostList;

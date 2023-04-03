@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import CreatePostForm from './Components/CreatePostForm/CreatePostForm';
-
+import PostList from "./Components/PostList/PostList";
 
 function App() {
 
@@ -8,7 +7,7 @@ function App() {
 
   return (
     <div>
-      <CreatePostForm />
+      <PostList postEntries={posts} />
     </div>
   );
 }

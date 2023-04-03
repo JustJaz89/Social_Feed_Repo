@@ -1,8 +1,14 @@
+import React, { useState } from 'react';
+import CreatePostForm from './Components/CreatePostForm/CreatePostForm';
+
 
 function App() {
+
+  const [posts, setPosts] = useState([{name: "Jazmin Ivy", post: "This is my React Social Feed Project!"}])
+
   return (
     <div>
-      <h3>Hello World</h3>
+      <CreatePostForm />
     </div>
   );
 }

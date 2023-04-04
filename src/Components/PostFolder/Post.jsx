@@ -4,21 +4,50 @@ const Post = (props) => {
 
     const [likes, setLikes] = useState(props.likes);
     const [dislikes, setDislikes] = useState(props.dislikes);
+    const [liked, setLiked] = useState(false);
+    const [disliked, setDisliked] = useState(false);
+
+    // const handleLike = () => {
+    //     setLikes(likes + 1);
+    // };
+
+    // const handleDislike = () => {
+    //     setDislikes(dislikes + 1);
+    // };
 
     const handleLike = () => {
-        setLikes(likes + 1);
+        if (liked) {
+            setLikes(likes + 1);
+            setLiked(true);
+            if (disliked) {
+                setDislikes(dislikes - 1);
+                setDisliked(false);
+            }
+        }   else {
+            setLikes(likes - 1);
+            setLiked(false);
+        }
     };
 
     const handleDislike = () => {
-        setDislikes(dislikes + 1);
+        if (disliked) {
+            setDislikes(dislikes + 1);
+            setDisliked(true);
+            if (liked){
+                setLikes(likes - 1);
+                setLiked(false);
+            }
+        }   else {
+            setDislikes(dislikes - 1);
+            setDisliked(false);
+        }
+        
     };
 
     return (
         <div className="buttons">
-            <button onClick={() => setLikes(likes + 1)}>Like</button>
-            <span>{likes}</span>
-            <button onClick={() => setDislikes(dislikes + 1)}>Dislike</button>
-            <span>{dislikes}</span>
+            <button onClick={handleLike}>Like({likes})</button>
+            <button onClick={handleDislike}>Dislike({dislikes})</button>
         </div>
     );
 }

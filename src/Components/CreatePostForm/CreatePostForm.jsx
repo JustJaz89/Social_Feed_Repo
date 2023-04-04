@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 
 const CreatePostForm = (props) => {
 
-    const [name, setName] = useState(" ");
-    const [post, setPost] = useState(" ");
+    const [name, setName] = useState("");
+    const [post, setPost] = useState("");
 
     function handleSubmit(event) {
         event.preventDefault();

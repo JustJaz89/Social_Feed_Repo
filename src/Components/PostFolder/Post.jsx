@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 
 const Post = (props) => {
 
-    const [likes, setLikes] = useState(props.likes);
-    const [dislikes, setDislikes] = useState(props.dislikes);
+    const [likes, setLikes] = useState(0);
+    const [dislikes, setDislikes] = useState(0);
     const [liked, setLiked] = useState(false);
     const [disliked, setDisliked] = useState(false);
 
@@ -16,7 +16,7 @@ const Post = (props) => {
     // };
 
     const handleLike = () => {
-        if (liked) {
+        if (!liked) {
             setLikes(likes + 1);
             setLiked(true);
             if (disliked) {
@@ -30,7 +30,7 @@ const Post = (props) => {
     };
 
     const handleDislike = () => {
-        if (disliked) {
+        if (!disliked) {
             setDislikes(dislikes + 1);
             setDisliked(true);
             if (liked){

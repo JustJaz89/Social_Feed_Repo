@@ -11,7 +11,7 @@ function App() {
 
   function addNewPost(post) {
 
-    let tempPosts = [post, ...posts];
+    let tempPosts = [...posts, post];
 
     setPosts(tempPosts);
   }

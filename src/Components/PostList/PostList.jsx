@@ -1,3 +1,4 @@
+import Post from "../PostFolder/Post";
 
 const PostList = (props) => {
     return ( 
@@ -6,6 +7,7 @@ const PostList = (props) => {
                 <tr>
                     <th>Name</th>
                     <th>Post</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
@@ -14,9 +16,12 @@ const PostList = (props) => {
                         <tr key={index}>
                             <td>{post.name}</td>
                             <td>{post.post}</td>
+                            <td>
+                                <Post />
+                            </td>
                         </tr>
                     );
-                })}
+                }).reverse()}
             </tbody>
         </table>
      );

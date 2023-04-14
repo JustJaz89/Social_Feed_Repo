@@ -14,10 +14,10 @@ const PostList = (props) => {
                 {props.postEntries.map((post, index) => {
                     return (
                         <tr key={index}>
-                            <td>{post.name}</td>
+                            <td>{post.name}</td><br></br>
                             <td>{post.post}</td>
                             <td>
-                                <Post />
+                                <Post /> 
                             </td>
                         </tr>
                     );
